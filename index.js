@@ -44,7 +44,7 @@ app.post('/getUserDetails',(req,res)=>{
 	
 	const mailOptions={
 	from:`${process.env.USERMAIL}`,
-	to:'sec19ee095@sairamtap.edu.in',
+	to:`${process.env.TOMAIL}`,
 	subject:'Hello from Divakar',
 	template:'email',
 	context:{ 
