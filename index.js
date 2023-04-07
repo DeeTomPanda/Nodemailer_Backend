@@ -7,7 +7,6 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 //Consts
-const PORT=8005
 const app=express()
 
 const transporter=nodemailer.createTransport({
@@ -65,4 +64,4 @@ app.post('/getUserDetails',(req,res)=>{
 	});
 })
 
-app.listen(PORT,()=>console.log(`Listening @${PORT}`))
+app.listen(`${process.env.PORT}`,()=>console.log(`Listening @${process.env.PORT}`))
